@@ -41,9 +41,9 @@ psql -U postgres -d shipment_tracking -f db/schema.sql
 
 ## Run
 
-For an in-person demo without local PostgreSQL setup, run with the `local` Spring profile. This uses an in-memory H2 database and creates the schema at startup.
+For an in-person demo without local PostgreSQL setup, run the app normally. The default profile uses an in-memory H2 database and creates the schema at startup.
 
-In IntelliJ:
+If you prefer being explicit in IntelliJ:
 
 ```text
 Run Configuration -> Active profiles: local
@@ -59,9 +59,10 @@ On this machine, Maven is available through the wrapper distribution cache:
 
 ```powershell
 $env:JAVA_HOME='C:\Program Files\Java\jdk-17'
-$env:SPRING_PROFILES_ACTIVE='local'
 & 'C:\Users\Gonug\.m2\wrapper\dists\apache-maven-3.9.15-bin\4rlcemksed9vjmkvgss0jpc4po\apache-maven-3.9.15\bin\mvn.cmd' spring-boot:run
 ```
+
+For PostgreSQL-backed execution, run with the `postgres` profile and configure `DATABASE_URL`, `DATABASE_USERNAME`, and `DATABASE_PASSWORD`.
 
 If the wrapper works in your shell:
 
