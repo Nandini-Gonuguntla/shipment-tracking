@@ -3,13 +3,11 @@ package com.assessment.shipment_tracking.controller;
 import com.assessment.shipment_tracking.security.JwtService;
 import java.time.Instant;
 import java.util.Map;
-import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Profile("local")
 public class LocalTokenController {
     private final JwtService jwtService;
 
