@@ -55,12 +55,11 @@ Or add this VM option:
 -Dspring.profiles.active=local
 ```
 
-On this machine, Maven is available through the wrapper distribution cache:
+Run the application using the Maven Wrapper:
 
 ```powershell
 $env:JAVA_HOME='C:\Program Files\Java\jdk-17'
-& 'C:\Users\Gonug\.m2\wrapper\dists\apache-maven-3.9.15-bin\4rlcemksed9vjmkvgss0jpc4po\apache-maven-3.9.15\bin\mvn.cmd' spring-boot:run
-```
+.\mvnw.cmd spring-boot:run```
 
 For PostgreSQL-backed execution, run with the `postgres` profile and configure `DATABASE_URL`, `DATABASE_USERNAME`, and `DATABASE_PASSWORD`.
 
@@ -77,16 +76,14 @@ Unit and API tests:
 
 ```powershell
 $env:JAVA_HOME='C:\Program Files\Java\jdk-17'
-& 'C:\Users\Gonug\.m2\wrapper\dists\apache-maven-3.9.15-bin\4rlcemksed9vjmkvgss0jpc4po\apache-maven-3.9.15\bin\mvn.cmd' clean test
-```
+.\mvnw.cmd clean test```
 
 Enable the TestContainers PostgreSQL integration test when Docker Desktop is running:
 
 ```powershell
 $env:JAVA_HOME='C:\Program Files\Java\jdk-17'
 $env:RUN_TESTCONTAINERS='true'
-& 'C:\Users\Gonug\.m2\wrapper\dists\apache-maven-3.9.15-bin\4rlcemksed9vjmkvgss0jpc4po\apache-maven-3.9.15\bin\mvn.cmd' clean test
-```
+.\mvnw.cmd clean test```
 
 Coverage report:
 
