@@ -26,9 +26,9 @@ Environment variables:
 
 ```text
 DATABASE_URL=jdbc:postgresql://localhost:5432/shipment_tracking
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
-JWT_SECRET=change-me-change-me-change-me-change-me
+DATABASE_USERNAME=your_database_username
+DATABASE_PASSWORD=your_database_password
+JWT_SECRET=your_long_random_secret
 RATE_LIMIT_REQUESTS_PER_MINUTE=1000
 SERVER_PORT=8081
 ```
